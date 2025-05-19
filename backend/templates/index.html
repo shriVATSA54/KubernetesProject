@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuickFeedback</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>QuickFeedback</h1>
+    <form action="/submit" method="POST">
+        <input type="text" name="name" placeholder="Your name (optional)">
+        <textarea name="message" placeholder="Enter your feedback..." required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/feedback">See All Feedback</a>
+</body>
+</html>

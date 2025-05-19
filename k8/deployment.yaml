@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feedback-app-deployment
+  labels:
+    app: feedback-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: feedback-app
+  template:
+    metadata:
+      labels:
+        app: feedback-app
+    spec:
+      containers:
+      - name: feedback-app
+        image: shrivatsa54/feedback-app:latest
+        ports:
+        - containerPort: 5000

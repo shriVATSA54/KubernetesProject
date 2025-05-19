@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Received</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>All Feedback</h1>
+    {% for item in feedback %}
+        <div class="feedback-box">
+            <strong>{{ item.name }}</strong><br>
+            {{ item.message }}
+        </div>
+    {% endfor %}
+    <a href="/">Back to Submit</a>
+</body>
+</html>
